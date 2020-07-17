@@ -22,7 +22,7 @@ export interface Company {
 
 export interface UserResponse {
     id: number;
-    name: string;
+    name: string | any;
     username: string;
     email: string;
     address: Addres;
@@ -34,13 +34,15 @@ export interface UserResponse {
 export interface UsersState {
     loading: boolean;
     error: any | null;
-    data: UserResponse | null;
+    data: UserResponse | null | any;
+    upload: any;
 }
 
 export const initialState: UsersState = {
     loading: false,
     error: null,
     data: null,
+    upload: null,
 };
 
 export default (state: UsersState = initialState, action: Action<UserResponse>): UsersState => {
@@ -76,6 +78,11 @@ export default (state: UsersState = initialState, action: Action<UserResponse>):
                     ...state.data,
                     name: action.payload,
                 },
+            };
+        case UsersActions.UploadSuccess:
+            return {
+                ...state,
+                upload: action.payload,
             };
         default:
             return state;

@@ -5,4 +5,5 @@ export enum UsersActions {
 
     ChangeName = 'Change name',
     ChangeNameFinished = 'Change nameFinished',
+    UploadSuccess = 'upload success',
 }

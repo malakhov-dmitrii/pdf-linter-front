@@ -15,7 +15,7 @@ const Uploader = () => {
     const props = {
         name: 'file',
         multiple: true,
-        action: 'https://pdf.words-of-wonders.com:443/',
+        action: 'http://185.119.56.82:5001/',
         onChange(info: any) {
             const { status } = info.file;
             if (status !== 'uploading') {

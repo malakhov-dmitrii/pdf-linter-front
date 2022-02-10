@@ -18,7 +18,7 @@
         "craco-antd": "^1.18.1",
         "husky": "^4.2.5",
         "lint-staged": "^10.2.11",
-        "node-sass": "^4.14.1",
+        "node-sass": "^7.0.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-redux": "^7.2.0",
